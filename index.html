@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دعوة زفاف سناء و محمود</title>
+<meta name="description" content="يسعدنا دعوتكم لحضور حفل زفاف سناء و محمود — الثلاثاء ١٠ نوفمبر ٢٠٢٦ — قاعة مروان، تلا">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@400;600;700&family=Reem+Kufi:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rose:#c9788a; --rose-deep:#a85468; --blush:#fbe9ee; --cream:#fff8f5; --gold:#c9a063; --ink:#5a3340;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family:'Cairo',sans-serif;color:var(--ink);
+  background:radial-gradient(circle at 20% 10%,#ffeef2 0,transparent 45%),radial-gradient(circle at 85% 90%,#fde3ea 0,transparent 45%),var(--cream);
+  overflow-x:hidden;
+}
+body.locked{overflow:hidden}
+
+/* petals */
+#petals{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden}
+.petal{position:absolute;top:-30px;width:14px;height:18px;background:radial-gradient(circle at 30% 30%,#fff 0,#f7c6d2 60%,#e9a0b3 100%);border-radius:80% 0 80% 0;opacity:.75;animation:fall linear infinite}
+@keyframes fall{to{transform:translateY(110vh) rotate(540deg) translateX(40px)}}
+
+/* intro */
+#intro{
+  position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;
+  background:linear-gradient(160deg,#fde3ea,#fff3f0 60%,#f9d6df);
+  transition:opacity .9s ease,transform .9s ease,visibility .9s;
+}
+#intro.hide{opacity:0;transform:scale(1.08);visibility:hidden}
+.intro-title{font-family:'Aref Ruqaa',serif;font-size:1.5rem;color:var(--rose-deep)}
+.seal{
+  width:150px;height:150px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-family:'Reem Kufi',sans-serif;font-size:3rem;color:#fff;letter-spacing:4px;
+  background:radial-gradient(circle at 35% 30%,#e29aab,#a85468);
+  box-shadow:0 0 0 8px rgba(255,255,255,.6),0 0 0 9px var(--gold),0 20px 40px rgba(168,84,104,.35);
+  animation:pulse 2.6s ease-in-out infinite;
+}
+@keyframes pulse{50%{transform:scale(1.05)}}
+.btn{
+  font-family:'Cairo',sans-serif;font-weight:700;font-size:1.05rem;cursor:pointer;border:none;
+  padding:13px 34px;border-radius:50px;color:#fff;background:linear-gradient(135deg,var(--rose),var(--rose-deep));
+  box-shadow:0 10px 24px rgba(168,84,104,.35);transition:transform .2s,box-shadow .2s;text-decoration:none;display:inline-block;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(168,84,104,.45)}
+.btn.ghost{background:#fff;color:var(--rose-deep);border:1.5px solid var(--rose);box-shadow:none}
+
+/* main */
+main{position:relative;z-index:2;max-width:520px;margin:0 auto;padding:40px 22px 60px;text-align:center;opacity:0;transform:translateY(20px);transition:opacity 1s .3s,transform 1s .3s}
+main.show{opacity:1;transform:none}
+.card{
+  background:rgba(255,255,255,.82);backdrop-filter:blur(6px);border:1px solid #f3cdd6;border-radius:28px;padding:34px 24px;
+  box-shadow:0 20px 50px rgba(201,120,138,.18);position:relative;
+}
+.card::before{content:"";position:absolute;inset:8px;border:1px dashed var(--gold);border-radius:22px;pointer-events:none;opacity:.7}
+.tag{font-family:'Reem Kufi',sans-serif;color:var(--gold);letter-spacing:2px;font-size:1.05rem}
+.names{font-family:'Aref Ruqaa',serif;font-size:3.2rem;line-height:1.35;color:var(--rose-deep);margin:10px 0}
+.names .amp{display:block;font-size:1.6rem;color:var(--gold)}
+.lead{font-size:1rem;line-height:2;margin:14px 0 22px}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:22px 0}
+.date{font-family:'Aref Ruqaa',serif;font-size:1.7rem;color:var(--rose-deep)}
+.time{margin-top:6px;font-size:1.05rem}.time b{font-size:1.6rem;color:var(--rose-deep)}
+.venue{margin-top:16px;font-size:1.05rem;line-height:1.9}.venue b{font-size:1.25rem}
+h3{font-family:'Aref Ruqaa',serif;font-size:1.5rem;color:var(--rose-deep);margin-bottom:14px}
+.count{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.count div{background:var(--blush);border-radius:16px;padding:14px 4px;border:1px solid #f3cdd6}
+.count b{display:block;font-size:1.7rem;font-family:'Reem Kufi',sans-serif;color:var(--rose-deep)}
+.count span{font-size:.85rem}
+.done{font-family:'Aref Ruqaa',serif;font-size:1.7rem;color:var(--rose-deep);padding:10px 0}
+.actions{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+.foot{margin-top:26px;font-family:'Aref Ruqaa',serif;font-size:1.35rem;color:var(--rose-deep)}
+@media(max-width:380px){.names{font-size:2.6rem}}
+</style>
+</head>
+<body class="locked">
+
+<div id="petals"></div>
+
+<section id="intro">
+  <div class="intro-title">دعوة زفاف 💍</div>
+  <div class="seal">س م</div>
+  <div class="intro-title" style="font-size:1.2rem">سناء &amp; محمود</div>
+  <button class="btn" id="openBtn">افتح الدعوة</button>
+</section>
+
+<main id="main">
+  <div class="card">
+    <div class="tag">بقلوب سعيدة</div>
+    <div class="names">سناء<span class="amp">&amp;</span>محمود</div>
+    <p class="lead">يسعدنا دعوتكم لحضور حفل زفافنا<br>ومشاركتنا أجمل لحظات حياتنا</p>
+    <div class="divider"></div>
+    <div class="date">الثلاثاء ١٠ نوفمبر ٢٠٢٦</div>
+    <div class="time"><b>٩:٠٠</b> مساءً</div>
+    <div class="venue"><b>قاعة مروان</b><br>مدينة تلا — المنوفية</div>
+    <div class="divider"></div>
+    <h3>باقي على الفرح</h3>
+    <div class="count" id="count">
+      <div><b id="d">—</b><span>يوم</span></div>
+      <div><b id="h">—</b><span>ساعة</span></div>
+      <div><b id="m">—</b><span>دقيقة</span></div>
+      <div><b id="s">—</b><span>ثانية</span></div>
+    </div>
+    <div class="divider"></div>
+    <div class="actions">
+      <a class="btn" href="https://maps.app.goo.gl/TFc7tc6LXo92gwYUA?g_st=iw" target="_blank" rel="noopener">📍 الموقع على الخريطة</a>
+      <button class="btn ghost" id="calBtn">📅 أضف الميعاد للتقويم</button>
+    </div>
+    <div class="foot">وجودكم أغلى هدية 🌷<br>سناء &amp; محمود</div>
+  </div>
+</main>
+
+<script>
+(function(){
+  // petals
+  var box=document.getElementById('petals');
+  for(var i=0;i<22;i++){
+    var p=document.createElement('span');p.className='petal';
+    p.style.left=Math.random()*100+'%';
+    p.style.animationDuration=(8+Math.random()*9)+'s';
+    p.style.animationDelay=(-Math.random()*14)+'s';
+    p.style.transform='scale('+(0.7+Math.random()*0.9)+')';
+    box.appendChild(p);
+  }
+
+  // open invitation
+  document.getElementById('openBtn').addEventListener('click',function(){
+    document.getElementById('intro').classList.add('hide');
+    document.body.classList.remove('locked');
+    document.getElementById('main').classList.add('show');
+    window.scrollTo(0,0);
+  });
+
+  // countdown (٩ مساءً بتوقيت القاهرة)
+  var target=new Date('2026-11-10T21:00:00+02:00').getTime();
+  var ar=function(n){return String(n).replace(/\d/g,function(x){return '٠١٢٣٤٥٦٧٨٩'[x]})};
+  function tick(){
+    var diff=target-Date.now();
+    if(diff<=0){
+      document.getElementById('count').outerHTML='<div class="done">الفرح النهارده 🎉 ربنا يبارك لهم</div>';
+      clearInterval(timer);return;
+    }
+    var s=Math.floor(diff/1000);
+    document.getElementById('d').textContent=ar(Math.floor(s/86400));
+    document.getElementById('h').textContent=ar(Math.floor(s%86400/3600));
+    document.getElementById('m').textContent=ar(Math.floor(s%3600/60));
+    document.getElementById('s').textContent=ar(s%60);
+  }
+  var timer=setInterval(tick,1000);tick();
+
+  // add to calendar (.ics)
+  document.getElementById('calBtn').addEventListener('click',function(){
+    var ics=[
+      'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Wedding Invitation//AR','BEGIN:VEVENT',
+      'UID:wedding-sanaa-mahmoud-20261110@invitation',
+      'DTSTAMP:20261109T000000Z',
+      'DTSTART:20261110T190000Z','DTEND:20261110T230000Z',
+      'SUMMARY:حفل زفاف سناء و محمود',
+      'LOCATION:قاعة مروان - تلا - المنوفية',
+      'DESCRIPTION:يسعدنا حضوركم\\nhttps://maps.app.goo.gl/TFc7tc6LXo92gwYUA',
+      'END:VEVENT','END:VCALENDAR'
+    ].join('\r\n');
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(new Blob([ics],{type:'text/calendar;charset=utf-8'}));
+    a.download='wedding-sanaa-mahmoud.ics';
+    document.body.appendChild(a);a.click();a.remove();
+  });
+})();
+</script>
+</body>
+</html>
